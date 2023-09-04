@@ -1,0 +1,33 @@
+Algorithm: Insertion-Sorting
+var 
+i:INTEGER 
+j:INTEGER 
+
+
+Input: arr (an array of elements)
+
+Output: arr (the sorted array)
+
+BEGIN
+
+  for i from 1 to length of arr do
+  
+     key = arr[i]                // The element to be inserted into the sorted 
+     
+     j = i - 1                  // Start comparing with the last element in the sorted 
+
+     while j >= 0 and arr[j] > key do
+     
+         arr[j + 1] = arr[j]     // Shift larger elements to the right
+
+        j = j - 1
+
+     end while
+
+     arr[j + 1] = key            // Insert the key element into its correct position
+
+  end for
+ 
+  return arr
+
+END
